@@ -13,9 +13,28 @@ export default class Environment {
             this.debugFolder = this.debug.ui.addFolder('Envieronment')
         }
 
-
+        this.setBackground()
         this.setSunLigth()
         this.setEnvironmentMap()
+    }
+
+    setBackground() {
+        // Crear un gradiente similar a la pantalla de carga
+        const canvas = document.createElement('canvas')
+        canvas.width = 2
+        canvas.height = 2
+        const context = canvas.getContext('2d')
+        
+        // Crear gradiente diagonal
+        const gradient = context.createLinearGradient(0, 0, 2, 2)
+        gradient.addColorStop(0, '#667eea')  // Color inicio del gradiente de loading
+        gradient.addColorStop(1, '#764ba2')  // Color fin del gradiente de loading
+        
+        context.fillStyle = gradient
+        context.fillRect(0, 0, 2, 2)
+        
+        const texture = new THREE.CanvasTexture(canvas)
+        this.scene.background = texture
     }
 
     setSunLigth() {
