@@ -52,6 +52,7 @@ export default class Environment {
     setEnvironmentMap() {
         this.environmentMap = {}
         this.environmentMap.intensity = 0.4
+/*
         this.environmentMap.texture = this.resources.items.environmentMapTexture
         // this.environmentMap.texture.encoding = THREE.SRGBToLinear
         this.scene.environmentMap = this.environmentMap.texture
@@ -68,7 +69,7 @@ export default class Environment {
         }
 
         this.environmentMap.updateMaterials()
-     
+  */   
         if(this.debug.active) {
             this.debugFolder.add(this.environmentMap, 'intensity')
             .name('Intencity')

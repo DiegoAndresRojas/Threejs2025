@@ -44,6 +44,14 @@ export default class Experience {
             this.update()
         })
 
+        // Actualizar progreso de carga
+        this.resources.on('progress', (loaded, total) => {
+            this.loadingScreen.updateProgress(loaded, total)
+        })
+
+        // Inicializar el contador con el total
+        this.loadingScreen.updateProgress(0, sources.length)
+
         //test
         this.world = new World() 
     }

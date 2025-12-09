@@ -9,7 +9,18 @@
   </head>
   <body>
     <div id="loading-screen">
-      <div id="loading-text">LOADING...</div>
+      <div class="loading-container">
+        <h1 class="logo-text">SimuCraft</h1>
+        <div class="loading-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+          <div class="loading-info">
+            <span id="loading-counter">0 / 0</span>
+            <span class="loading-label">Modelos cargados</span>
+          </div>
+        </div>
+      </div>
     </div>
     <script type="module" src="./main.js"></script>
   </body>

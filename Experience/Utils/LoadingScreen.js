@@ -1,7 +1,19 @@
 export default class LoadingScreen {
     constructor() {
         this.element = document.getElementById('loading-screen')
+        this.counterElement = document.getElementById('loading-counter')
+        this.progressFillElement = document.getElementById('progress-fill')
         this.isVisible = true
+    }
+
+    updateProgress(loaded, total) {
+        if (this.counterElement) {
+            this.counterElement.textContent = `${loaded} / ${total}`
+        }
+        if (this.progressFillElement && total > 0) {
+            const percentage = (loaded / total) * 100
+            this.progressFillElement.style.width = `${percentage}%`
+        }
     }
 
     hide() {

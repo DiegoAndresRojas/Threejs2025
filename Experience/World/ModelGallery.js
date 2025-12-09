@@ -23,7 +23,7 @@ export default class ModelGallery
     setupModels() {
         // Crear instancias de los modelos
         this.models = [
-            new SillaSkium(),
+            //new SillaSkium(),
             new CarWheel(),
             new OfficePC(),
             new IndustrialRobot(),

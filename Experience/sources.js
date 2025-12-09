@@ -2,6 +2,7 @@
 
 
 export default [
+    /*
     {
         name: 'environmentMapTexture',
         type: 'cubeTexture',
@@ -24,16 +25,18 @@ export default [
         type: 'texture',
         path: '/assets/textures/grass.png',
     },
+    */
     {
         name: 'officePCModel',
         type: 'gltfModel',
         path: '/assets/models/office_pc/scene.gltf'
     },
-    {
+  /*  {
         name: 'sillaSkiumModel',
         type: 'gltfModel',
         path: '/assets/models/silla_sklum/scene.gltf'
     },
+  */  
     {
         name: 'carWheelModel',
         type: 'gltfModel',
